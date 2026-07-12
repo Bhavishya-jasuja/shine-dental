@@ -21,12 +21,12 @@ export function FloatingCTA() {
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.4, ease: "easeOut" }}
-        className="fixed bottom-3 left-3 right-3 z-50 md:hidden"
+        className="fixed left-3 right-3 z-50 md:hidden"
+        style={{ bottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}
       >
         <div
           className="relative overflow-hidden rounded-2xl shadow-2xl shadow-blue-950/40 border border-white/20 p-2"
           style={{
-            paddingBottom: "calc(0.5rem + env(safe-area-inset-bottom))",
             background: "linear-gradient(135deg, rgba(12,27,51,0.85), rgba(30,58,138,0.8), rgba(21,101,192,0.78))",
             backdropFilter: "blur(20px) saturate(160%)",
             WebkitBackdropFilter: "blur(20px) saturate(160%)",
