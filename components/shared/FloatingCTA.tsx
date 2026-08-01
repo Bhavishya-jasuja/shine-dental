@@ -16,17 +16,28 @@ export function FloatingCTA() {
 
   return (
     <>
-      {/* Mobile "Sunday Closed" tag — sits just above the bottom bar */}
+      {/* Mobile hours tag — sits just above the bottom bar */}
       <motion.div
         initial={{ y: 12, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
-        className="fixed left-0 right-0 z-50 md:hidden flex justify-center"
+        className="fixed left-0 right-0 z-50 md:hidden flex justify-center px-4"
         style={{ bottom: "calc(5.25rem + env(safe-area-inset-bottom))" }}
       >
-        <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-50 border border-gold-100 shadow-sm">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#8DAA91]" />
-          <span className="text-[11px] font-semibold text-gold-700">Sunday: Closed</span>
+        <span
+          className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-0.5 px-3 py-1.5 rounded-2xl border border-white/40 shadow-sm"
+          style={{
+            background: "rgba(255,255,255,0.35)",
+            backdropFilter: "blur(16px) saturate(160%)",
+            WebkitBackdropFilter: "blur(16px) saturate(160%)",
+          }}
+        >
+          <span className="flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#8DAA91]" />
+            <span className="text-[10px] font-semibold text-[#2A2A28]">Mon–Sat · 11AM–3PM &amp; 5PM–7:30PM</span>
+          </span>
+          <span className="w-px h-3 bg-[#E8E8E4]" />
+          <span className="text-[10px] font-semibold text-gold-700">Sunday: Closed</span>
         </span>
       </motion.div>
 

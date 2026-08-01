@@ -1,14 +1,14 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Microscope, Award, Shield, Heart, Clock, BadgeCheck, Zap, Users } from "lucide-react"
+import { SmilePlus, Award, Shield, Heart, Clock, BadgeCheck, Zap, Users } from "lucide-react"
 import { SectionHeading } from "@/components/shared/SectionHeading"
 
 const FEATURES = [
   {
-    icon: Microscope,
-    title: "Surgical Microscope",
-    description: "25× magnification for precision unmatched by conventional dentistry.",
+    icon: SmilePlus,
+    title: "Dental Implants",
+    description: "All-on-4, All-on-6, immediate loading & single day implant dentistry.",
     color: "blue",
   },
   {

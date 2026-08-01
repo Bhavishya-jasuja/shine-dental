@@ -21,18 +21,19 @@ export const SERVICES: Service[] = [
   {
     id: "dental-implants",
     title: "Dental Implants",
-    shortDesc: "Fixed Teeth — Permanent Solution",
+    shortDesc: "All-on-4 · All-on-6 · Single Day Implants",
     description:
       "Permanent, reliable, and natural-looking solution to tooth loss. Our dental implants restore full function and aesthetics, from single tooth to full arch restoration.",
     icon: "tooth",
     image: "/images/services/dental-implants.jpg",
     badge: { text: "Popular", variant: "gold" },
     features: [
-      "All-on-4 & All-on-6 options",
-      "Single tooth implants",
-      "Same-day smile",
-      "Titanium grade implants",
-      "Lifetime warranty",
+      "All-on-4 Full Arch",
+      "All-on-6 Full Arch",
+      "Immediate Loading Implants",
+      "Single Day Implant Dentistry",
+      "Single Tooth Implants",
+      "Titanium Grade Implants",
     ],
   },
   {
