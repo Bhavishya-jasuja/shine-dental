@@ -7,6 +7,7 @@ import { X, ChevronLeft, ChevronRight, Expand } from "lucide-react"
 import { SectionHeading } from "@/components/shared/SectionHeading"
 
 const GALLERY = [
+  { src: "/images/hospital.png", alt: "Shine Dental and Medical Clinic building", orientation: "landscape" },
   { src: "/images/gallery/AB901295.jpg", alt: "Shine Dental Clinic", orientation: "landscape" },
   { src: "/images/gallery/AB901301.jpg", alt: "Treatment Room", orientation: "portrait" },
   { src: "/images/gallery/AB901304.jpg", alt: "Dental Equipment", orientation: "landscape" },
@@ -87,13 +88,13 @@ export function GallerySection() {
                 sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A28]/70 via-[#2A2A28]/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A28]/75 via-[#2A2A28]/10 to-transparent" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 w-11 h-11 rounded-full bg-white/95 flex items-center justify-center shadow-lg">
                   <Expand className="w-4.5 h-4.5 text-[#B8935A]" />
                 </div>
               </div>
-              <p className="absolute bottom-3 left-3 right-3 text-white text-xs font-semibold opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">
+              <p className="absolute bottom-3 left-3 right-3 text-white font-light text-xs sm:text-sm leading-tight">
                 {img.alt}
               </p>
             </motion.div>

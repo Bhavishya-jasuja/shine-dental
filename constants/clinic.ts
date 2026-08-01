@@ -8,7 +8,7 @@ export const CLINIC = {
     "Experience painless, precise dental care by IBE-certified specialist endodontists. Advanced microscopic technology, 15+ years of excellence, and 10,000+ happy smiles.",
   address: "Near Mahaveer Chowk, Muzaffarnagar – 251001, Uttar Pradesh",
   addressShort: "Near Mahaveer Chowk, Muzaffarnagar",
-  phones: ["8126711725"],
+  phones: ["8126711725", "8791362345", "9045452123"],
   primaryPhone: "8126711725",
   email: "shine.dental@yahoo.com",
   whatsapp: "918126711725",

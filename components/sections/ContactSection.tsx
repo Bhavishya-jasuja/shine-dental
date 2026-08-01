@@ -80,7 +80,7 @@ export function ContactSection() {
     {
       icon: Phone,
       label: "Phone",
-      value: CLINIC.phones[0],
+      value: CLINIC.phones.join("  ·  "),
       href: `tel:+91${CLINIC.phones[0]}`,
       color: "teal" as const,
     },

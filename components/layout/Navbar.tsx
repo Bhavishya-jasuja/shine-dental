@@ -25,29 +25,29 @@ export function Navbar() {
   return (
     <>
       {/* Top Banner */}
-      <div
-        className="hidden md:block fixed top-0 left-0 right-0 z-50 text-white/85 text-xs py-2 border-b border-white/10"
-        style={{ background: "linear-gradient(90deg, #2A2A28, #3A3A36, #2A2A28)" }}
-      >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <div className="flex items-center gap-5">
-            <a href={`tel:+91${CLINIC.primaryPhone}`} className="flex items-center gap-1.5 hover:text-white transition-colors font-medium">
-              <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center">
+      <div className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-[#F8F8F6] border-b border-[#E8E8E4]">
+        <div className="max-w-7xl mx-auto px-6 h-9 flex items-center justify-between text-xs text-[#2A2A28]/70">
+          <div className="flex items-center gap-2.5 pl-1 pr-3.5 py-1 rounded-full bg-white border border-[#E8E8E4]">
+            <a href={`tel:+91${CLINIC.primaryPhone}`} className="flex items-center gap-1.5 pl-0.5 font-semibold text-[#2A2A28] hover:text-gold-600 transition-colors">
+              <span className="w-5 h-5 rounded-full bg-gold-50 flex items-center justify-center text-gold-600">
                 <Phone className="w-2.5 h-2.5" />
               </span>
               {CLINIC.primaryPhone}
             </a>
-            <span className="w-px h-3 bg-white/15" />
-            <span className="flex items-center gap-1.5">
-              <Star className="w-3 h-3 fill-gold-400 text-gold-400" />
-              <strong className="text-white">{CLINIC.rating}</strong> · {CLINIC.ratingCount} Google Reviews
+            <span className="w-px h-3 bg-[#E8E8E4]" />
+            <span className="flex items-center gap-1">
+              <Star className="w-3 h-3 fill-gold-500 text-gold-500" />
+              <strong className="text-[#2A2A28] font-semibold">{CLINIC.rating}</strong>
+              <span>· {CLINIC.ratingCount} Google Reviews</span>
             </span>
           </div>
-          <div className="flex items-center gap-1.5 text-white/65">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Mon–Sat · 11AM–3PM & 5PM–7:30PM
-            <span className="text-white/30">|</span>
-            <span className="text-rose-300/90 font-semibold">Sunday: Closed</span>
+          <div className="flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-white border border-[#E8E8E4]">
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#8DAA91]" />
+              Mon–Sat · 11AM–3PM &amp; 5PM–7:30PM
+            </span>
+            <span className="w-px h-3 bg-[#E8E8E4]" />
+            <span className="text-gold-700 font-semibold">Sunday: Closed</span>
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@ export function Navbar() {
       {/* Main Navbar — always light, subtle shadow once scrolled */}
       <motion.nav
         className={cn(
-          "fixed left-0 right-0 z-40 md:top-[29px] top-0 bg-white transition-shadow duration-300",
+          "fixed left-0 right-0 z-40 md:top-9 top-0 bg-white transition-shadow duration-300",
           isScrolled ? "shadow-[0_2px_20px_rgba(42,42,40,0.08)]" : "shadow-none"
         )}
       >
@@ -71,7 +71,7 @@ export function Navbar() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center h-20 gap-4">
             {/* Logo */}
             <a href="#doctors" className="group flex items-center gap-3 flex-shrink-0">
-              <div className="relative">
+              <div className="relative mt-1">
                 <div className="absolute -inset-1.5 rounded-2xl bg-gold-400/30 blur-sm opacity-0 group-hover:opacity-100 transition-opacity" />
                 <Image
                   src="/images/logo/logo.jpeg"

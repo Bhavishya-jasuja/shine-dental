@@ -47,16 +47,22 @@ export function Footer() {
   return (
     <footer className="bg-[#F8F8F6] text-[#2A2A28] relative overflow-hidden border-t border-[#E8E8E4]">
       {/* Emergency Bar */}
-      <div className="relative bg-gradient-to-r from-red-600 to-rose-600 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-white">
-          <div className="flex items-center gap-2 font-semibold">
-            <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
+      <div
+        className="relative py-3.5 border-b border-gold-500/20"
+        style={{ background: "linear-gradient(90deg, #2A2A28, #5C2430, #2A2A28)" }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white">
+          <div className="flex items-center gap-2.5 font-semibold">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold-300 opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-gold-300" />
+            </span>
             Dental Emergency? We&apos;re here to help.
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-2.5">
             <a
               href={`tel:+91${CLINIC.primaryPhone}`}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/20 hover:bg-white/30 font-bold text-xs transition-colors"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 hover:bg-white/15 hover:border-gold-300/40 font-semibold text-xs transition-colors"
             >
               <Phone className="w-3.5 h-3.5" />
               {CLINIC.primaryPhone}
@@ -65,7 +71,7 @@ export function Footer() {
               href={`https://wa.me/${CLINIC.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/20 hover:bg-white/30 font-bold text-xs transition-colors"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 hover:bg-white/15 hover:border-gold-300/40 font-semibold text-xs transition-colors"
             >
               <MessageCircle className="w-3.5 h-3.5" />
               WhatsApp
@@ -190,12 +196,20 @@ export function Footer() {
                 {CLINIC.address}
               </span>
             </a>
-            <a href={`tel:+91${CLINIC.phones[0]}`} className="flex gap-3 group">
-              <Phone className="w-4 h-4 text-gold-600 flex-shrink-0" />
-              <span className="text-sm text-[#666666] group-hover:text-gold-600 transition-colors">
-                {CLINIC.phones[0]}
-              </span>
-            </a>
+            <div className="flex gap-3">
+              <Phone className="w-4 h-4 text-gold-600 flex-shrink-0 mt-0.5" />
+              <div className="flex flex-col gap-1">
+                {CLINIC.phones.map((phone) => (
+                  <a
+                    key={phone}
+                    href={`tel:+91${phone}`}
+                    className="text-sm text-[#666666] hover:text-gold-600 transition-colors"
+                  >
+                    {phone}
+                  </a>
+                ))}
+              </div>
+            </div>
             <a href={`mailto:${CLINIC.email}`} className="flex gap-3 group">
               <Mail className="w-4 h-4 text-gold-600 flex-shrink-0" />
               <span className="text-sm text-[#666666] group-hover:text-gold-600 transition-colors">
@@ -207,7 +221,7 @@ export function Footer() {
               <div className="text-sm text-[#666666]">
                 <p>Mon–Sat: 11AM–3PM</p>
                 <p>5PM–7:30PM</p>
-                <p className="text-red-600 font-semibold mt-1">Sunday: Closed</p>
+                <p className="text-[#8B4A52] font-semibold mt-1">Sunday: Closed</p>
               </div>
             </div>
           </div>

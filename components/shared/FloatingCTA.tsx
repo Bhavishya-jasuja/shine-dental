@@ -16,6 +16,20 @@ export function FloatingCTA() {
 
   return (
     <>
+      {/* Mobile "Sunday Closed" tag — sits just above the bottom bar */}
+      <motion.div
+        initial={{ y: 12, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
+        className="fixed left-0 right-0 z-50 md:hidden flex justify-center"
+        style={{ bottom: "calc(5.25rem + env(safe-area-inset-bottom))" }}
+      >
+        <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-50 border border-gold-100 shadow-sm">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#8DAA91]" />
+          <span className="text-[11px] font-semibold text-gold-700">Sunday: Closed</span>
+        </span>
+      </motion.div>
+
       {/* Mobile bottom bar */}
       <motion.div
         initial={{ y: 80, opacity: 0 }}

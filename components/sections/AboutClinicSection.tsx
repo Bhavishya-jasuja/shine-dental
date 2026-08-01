@@ -1,8 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
-import { MapPin, Clock, Phone, CheckCircle } from "lucide-react"
+import { MapPin, Phone, CheckCircle } from "lucide-react"
 import { SectionHeading } from "@/components/shared/SectionHeading"
 import { CLINIC } from "@/constants/clinic"
 
@@ -35,64 +34,18 @@ export function AboutClinicSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-lg h-72 sm:h-80">
-              <Image
-                src="/images/hospital.png"
-                alt="Shine Dental and Medical Clinic building"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-
-            {/* Clinic video */}
-            <div className="mt-3 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+            {/* Clinic video — own natural 9:16 portrait size */}
+            <div className="mx-auto w-full max-w-[320px] sm:max-w-[360px] aspect-[9/16] rounded-2xl overflow-hidden shadow-lg bg-black">
               <video
-                src="/videos/clinic-video.mp4"
+                src="/videos/clinic-tour.mp4"
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="w-full h-64 sm:h-72 object-cover"
+                preload="auto"
+                className="w-full h-full object-cover"
               />
             </div>
-
-            {/* Floating info chips */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="absolute -bottom-4 -left-4 glass rounded-2xl p-4 shadow-premium"
-            >
-              <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-gold-100 flex items-center justify-center">
-                  <Clock className="w-4 h-4 text-gold-600" />
-                </div>
-                <div>
-                  <p className="text-xs font-extrabold text-[#2A2A28]">Mon – Sat</p>
-                  <p className="text-[11px] text-slate-400">11AM–3PM · 5PM–7:30PM</p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="absolute -top-4 -right-4 glass rounded-2xl p-4 shadow-premium"
-            >
-              <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-stone-100 flex items-center justify-center">
-                  <CheckCircle className="w-4 h-4 text-stone-600" />
-                </div>
-                <div>
-                  <p className="text-xs font-extrabold text-[#2A2A28]">ISO Standards</p>
-                  <p className="text-[11px] text-slate-400">International Sterilization</p>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Content */}

@@ -19,10 +19,10 @@ const ICON_MAP: Record<string, React.ElementType> = {
 }
 
 const BADGE_STYLES = {
-  blue: "bg-gold-100 text-gold-700",
-  gold: "bg-amber-100 text-amber-700",
-  teal: "bg-stone-100 text-stone-700",
-  rose: "bg-rose-100 text-rose-700",
+  blue: "bg-gold-500/30 border border-white/25 text-white",
+  gold: "bg-amber-500/30 border border-white/25 text-white",
+  teal: "bg-stone-900/35 border border-white/20 text-white",
+  rose: "bg-rose-500/30 border border-white/25 text-white",
 }
 
 export function ServicesSection() {
@@ -71,7 +71,7 @@ export function ServicesSection() {
 
                   {service.badge && (
                     <div className="absolute top-3 left-3">
-                      <span className={`text-[10px] font-bold px-2 py-1 rounded-md ${BADGE_STYLES[service.badge.variant]}`}>
+                      <span className={`text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-md shadow-sm ${BADGE_STYLES[service.badge.variant]}`}>
                         {service.badge.text}
                       </span>
                     </div>
