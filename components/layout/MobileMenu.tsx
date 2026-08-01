@@ -43,7 +43,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             {/* Header */}
             <div className="flex items-center justify-between p-5 border-b border-slate-100">
               <div>
-                <p className="font-extrabold text-[#0C1B33] text-base leading-none">
+                <p className="font-extrabold text-[#2A2A28] text-base leading-none">
                   Shine Dental
                 </p>
                 <p className="text-xs text-slate-400 mt-0.5">& Medical Clinic</p>
@@ -70,7 +70,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     <a
                       href={link.href}
                       onClick={onClose}
-                      className="flex items-center px-4 py-3 rounded-xl text-[#0C1B33] font-semibold text-sm hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                      className="flex items-center px-4 py-3 rounded-xl text-[#2A2A28] font-semibold text-sm hover:bg-gold-50 hover:text-gold-700 transition-colors"
                     >
                       {link.label}
                     </a>
@@ -84,14 +84,14 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <a
                 href={`#contact`}
                 onClick={onClose}
-                className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#1565C0] text-white text-sm font-bold hover:bg-blue-700 transition-colors"
+                className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#B8935A] text-white text-sm font-bold hover:bg-gold-700 transition-colors"
               >
                 📅 Book Appointment
               </a>
               <div className="flex gap-2">
                 <a
                   href={`tel:+91${CLINIC.primaryPhone}`}
-                  className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-slate-200 text-slate-700 text-xs font-semibold hover:border-blue-300 hover:text-blue-700 transition-colors"
+                  className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-slate-200 text-slate-700 text-xs font-semibold hover:border-gold-300 hover:text-gold-700 transition-colors"
                 >
                   <Phone className="w-3.5 h-3.5" />
                   Call

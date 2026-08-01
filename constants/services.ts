@@ -8,7 +8,7 @@ export const SERVICES: Service[] = [
     description:
       "Experience painless root canal treatment with 25× magnification. Our advanced surgical microscope technology ensures the highest success rates with precision unmatched by conventional methods.",
     icon: "microscope",
-    image: "/images/services/micro-endo.webp",
+    image: "/images/microscope-treatment.jpeg",
     badge: { text: "Speciality", variant: "blue" },
     features: [
       "Single-visit completion",

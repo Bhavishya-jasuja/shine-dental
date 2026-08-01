@@ -67,7 +67,7 @@ export function ContactSection() {
   }
 
   const inputClass =
-    "w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm text-[#0C1B33] placeholder:text-slate-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all"
+    "w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm text-[#2A2A28] placeholder:text-slate-400 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-100 transition-all"
 
   const CONTACT_ITEMS = [
     {
@@ -107,8 +107,8 @@ export function ContactSection() {
   ]
 
   const colorMap = {
-    blue: { bg: "bg-blue-50", icon: "text-blue-600" },
-    teal: { bg: "bg-teal-50", icon: "text-teal-600" },
+    blue: { bg: "bg-gold-50", icon: "text-gold-600" },
+    teal: { bg: "bg-stone-50", icon: "text-stone-600" },
     emerald: { bg: "bg-emerald-50", icon: "text-emerald-600" },
     amber: { bg: "bg-amber-50", icon: "text-amber-600" },
     violet: { bg: "bg-violet-50", icon: "text-violet-600" },
@@ -118,8 +118,8 @@ export function ContactSection() {
     <section id="contact" className="py-20 sm:py-28 bg-slate-50 relative overflow-hidden">
       {/* Decorative color orbs */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-[420px] h-[420px] rounded-full bg-blue-200/25 blur-[110px] -translate-x-1/3 -translate-y-1/3" />
-        <div className="absolute bottom-0 right-0 w-[380px] h-[380px] rounded-full bg-teal-200/25 blur-[100px] translate-x-1/4 translate-y-1/4" />
+        <div className="absolute top-0 left-0 w-[420px] h-[420px] rounded-full bg-gold-200/25 blur-[110px] -translate-x-1/3 -translate-y-1/3" />
+        <div className="absolute bottom-0 right-0 w-[380px] h-[380px] rounded-full bg-stone-200/25 blur-[100px] translate-x-1/4 translate-y-1/4" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
@@ -154,7 +154,7 @@ export function ContactSection() {
                         href={item.href}
                         target={item.href.startsWith("http") ? "_blank" : undefined}
                         rel="noopener noreferrer"
-                        className="text-sm text-slate-600 hover:text-[#1565C0] transition-colors leading-relaxed"
+                        className="text-sm text-slate-600 hover:text-[#B8935A] transition-colors leading-relaxed"
                       >
                         {item.value}
                       </a>
@@ -184,14 +184,14 @@ export function ContactSection() {
               {/* Pin label overlay */}
               <div className="absolute top-3 left-3 flex items-center gap-2 px-3 py-2 rounded-xl glass shadow-md pointer-events-none max-w-[75%]">
                 <MapPin className="w-4 h-4 text-red-500 shrink-0" />
-                <span className="text-xs font-bold text-[#0C1B33] truncate">{CLINIC.shortName}</span>
+                <span className="text-xs font-bold text-[#2A2A28] truncate">{CLINIC.shortName}</span>
               </div>
 
               <a
                 href={CLINIC.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute bottom-3 right-3 px-3 py-1.5 rounded-lg bg-white text-xs font-bold text-[#1565C0] shadow-md hover:shadow-lg transition-shadow"
+                className="absolute bottom-3 right-3 px-3 py-1.5 rounded-lg bg-white text-xs font-bold text-[#B8935A] shadow-md hover:shadow-lg transition-shadow"
               >
                 Get Directions →
               </a>
@@ -206,20 +206,20 @@ export function ContactSection() {
             transition={{ duration: 0.5 }}
             className="relative bg-white rounded-3xl border border-slate-100 shadow-premium p-6 sm:p-8 overflow-hidden"
           >
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-500" />
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-gold-600 via-amber-500 to-stone-500" />
 
             {submitted ? (
               <div className="flex flex-col items-center text-center py-10">
-                <div className="w-16 h-16 rounded-full bg-teal-50 flex items-center justify-center mb-4">
-                  <CheckCircle className="w-8 h-8 text-teal-600" />
+                <div className="w-16 h-16 rounded-full bg-stone-50 flex items-center justify-center mb-4">
+                  <CheckCircle className="w-8 h-8 text-stone-600" />
                 </div>
-                <h3 className="text-xl font-extrabold text-[#0C1B33] mb-2">Appointment Requested!</h3>
+                <h3 className="text-xl font-extrabold text-[#2A2A28] mb-2">Appointment Requested!</h3>
                 <p className="text-slate-500 text-sm max-w-xs">
                   Your request has been sent via WhatsApp. We&apos;ll confirm your appointment shortly.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="mt-6 px-5 py-2.5 rounded-xl bg-[#1565C0] text-white text-sm font-bold hover:bg-blue-700 transition-colors"
+                  className="mt-6 px-5 py-2.5 rounded-xl bg-[#B8935A] text-white text-sm font-bold hover:bg-gold-700 transition-colors"
                 >
                   Book Another
                 </button>
@@ -227,11 +227,11 @@ export function ContactSection() {
             ) : (
               <>
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                    <Send className="w-5 h-5 text-blue-600" />
+                  <div className="w-11 h-11 rounded-xl bg-gold-50 flex items-center justify-center shrink-0">
+                    <Send className="w-5 h-5 text-gold-600" />
                   </div>
                   <div>
-                    <h3 className="font-extrabold text-[#0C1B33] text-xl leading-tight">Book an Appointment</h3>
+                    <h3 className="font-extrabold text-[#2A2A28] text-xl leading-tight">Book an Appointment</h3>
                     <p className="text-slate-400 text-sm">We&apos;ll confirm within 2 hours via WhatsApp</p>
                   </div>
                 </div>
@@ -331,7 +331,7 @@ export function ContactSection() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#1565C0] hover:bg-blue-700 text-white font-bold text-sm disabled:opacity-60 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all"
+                    className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#B8935A] hover:bg-gold-700 text-white font-bold text-sm disabled:opacity-60 shadow-lg shadow-gold-500/25 hover:shadow-gold-500/40 hover:-translate-y-0.5 transition-all"
                   >
                     {loading ? (
                       <>

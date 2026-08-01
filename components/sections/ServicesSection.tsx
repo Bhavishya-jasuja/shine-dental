@@ -19,9 +19,9 @@ const ICON_MAP: Record<string, React.ElementType> = {
 }
 
 const BADGE_STYLES = {
-  blue: "bg-blue-100 text-blue-700",
+  blue: "bg-gold-100 text-gold-700",
   gold: "bg-amber-100 text-amber-700",
-  teal: "bg-teal-100 text-teal-700",
+  teal: "bg-stone-100 text-stone-700",
   rose: "bg-rose-100 text-rose-700",
 }
 
@@ -52,7 +52,7 @@ export function ServicesSection() {
                 transition={{ duration: 0.5, delay: i * 0.07 }}
                 whileHover={{ y: -6 }}
                 onClick={() => setActiveId(isActive ? null : service.id)}
-                className="group relative bg-white rounded-2xl border border-slate-100 hover:border-blue-200 overflow-hidden shadow-sm hover:shadow-card-hover transition-all duration-300 cursor-pointer"
+                className="group relative bg-white rounded-2xl border border-slate-100 hover:border-gold-200 overflow-hidden shadow-sm hover:shadow-card-hover transition-all duration-300 cursor-pointer"
               >
                 {/* Image */}
                 <div className="relative h-44 overflow-hidden">
@@ -64,10 +64,10 @@ export function ServicesSection() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement
-                      target.src = `https://placehold.co/400x250/EEF3FA/1565C0?text=${encodeURIComponent(service.title)}`
+                      target.src = `https://placehold.co/400x250/F8F8F6/B8935A?text=${encodeURIComponent(service.title)}`
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0C1B33]/50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A28]/50 to-transparent" />
 
                   {service.badge && (
                     <div className="absolute top-3 left-3">
@@ -79,14 +79,14 @@ export function ServicesSection() {
 
                   <div className="absolute bottom-3 right-3">
                     <div className="w-9 h-9 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-sm">
-                      <Icon className="w-4 h-4 text-blue-600" />
+                      <Icon className="w-4 h-4 text-gold-600" />
                     </div>
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-4">
-                  <h3 className="font-bold text-[#0C1B33] text-sm mb-1 group-hover:text-blue-700 transition-colors">
+                  <h3 className="font-bold text-[#2A2A28] text-sm mb-1 group-hover:text-gold-700 transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-slate-400 text-xs mb-3">{service.shortDesc}</p>
@@ -103,7 +103,7 @@ export function ServicesSection() {
                         <ul className="space-y-1.5">
                           {service.features.map((f) => (
                             <li key={f} className="flex items-center gap-2 text-xs text-slate-600">
-                              <Check className="w-3.5 h-3.5 text-teal-500 flex-shrink-0" />
+                              <Check className="w-3.5 h-3.5 text-stone-500 flex-shrink-0" />
                               {f}
                             </li>
                           ))}
@@ -111,13 +111,13 @@ export function ServicesSection() {
                         <a
                           href="#contact"
                           onClick={(e) => e.stopPropagation()}
-                          className="mt-4 flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-700"
+                          className="mt-4 flex items-center gap-1 text-xs font-bold text-gold-600 hover:text-gold-700"
                         >
                           Book This Service <ChevronRight className="w-3 h-3" />
                         </a>
                       </motion.div>
                     ) : (
-                      <button className="flex items-center gap-1 text-xs font-semibold text-blue-600">
+                      <button className="flex items-center gap-1 text-xs font-semibold text-gold-600">
                         Learn more <ChevronRight className="w-3 h-3" />
                       </button>
                     )}
@@ -125,7 +125,7 @@ export function ServicesSection() {
                 </div>
 
                 {/* Active indicator */}
-                <div className={`absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-500 transition-transform origin-left duration-300 ${isActive ? "scale-x-100" : "scale-x-0"}`} />
+                <div className={`absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-gold-600 to-amber-500 transition-transform origin-left duration-300 ${isActive ? "scale-x-100" : "scale-x-0"}`} />
               </motion.div>
             )
           })}
@@ -134,7 +134,7 @@ export function ServicesSection() {
         <div className="text-center mt-10">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[#1565C0] hover:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[#B8935A] hover:bg-gold-700 text-white font-bold text-sm shadow-lg shadow-gold-500/25 hover:shadow-gold-500/40 hover:-translate-y-0.5 transition-all"
           >
             Book a Free Consultation <ChevronRight className="w-4 h-4" />
           </a>

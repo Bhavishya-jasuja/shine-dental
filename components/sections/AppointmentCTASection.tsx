@@ -6,7 +6,7 @@ import { CLINIC } from "@/constants/clinic"
 
 export function AppointmentCTASection() {
   return (
-    <section className="py-16 bg-gradient-to-br from-[#1565C0] via-[#1E3A8A] to-[#0C1B33] relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-br from-[#B8935A] via-[#6B5431] to-[#2A2A28] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/5 -translate-y-1/2 translate-x-1/2" />
@@ -52,7 +52,7 @@ export function AppointmentCTASection() {
           >
             <a
               href="#contact"
-              className="flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-white text-[#1565C0] font-extrabold text-base hover:bg-blue-50 transition-all shadow-xl hover:-translate-y-0.5"
+              className="flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-white text-[#B8935A] font-extrabold text-base hover:bg-gold-50 transition-all shadow-xl hover:-translate-y-0.5"
             >
               <Calendar className="w-5 h-5" />
               Book Appointment

@@ -12,7 +12,7 @@ export const TESTIMONIALS: Testimonial[] = [
     treatment: "Invisible Aligners",
     date: "a week ago",
     reviewCount: "7 reviews · 3 photos",
-    color: "from-emerald-500 to-teal-600",
+    color: "from-emerald-500 to-stone-600",
   },
   {
     id: "2",
@@ -23,7 +23,7 @@ export const TESTIMONIALS: Testimonial[] = [
     treatment: "Dental Implants",
     date: "7 months ago",
     reviewCount: "7 reviews",
-    color: "from-indigo-500 to-blue-600",
+    color: "from-indigo-500 to-gold-600",
   },
   {
     id: "3",
@@ -67,7 +67,7 @@ export const TESTIMONIALS: Testimonial[] = [
     treatment: "General Dental Care",
     date: "a month ago",
     reviewCount: "1 review",
-    color: "from-sky-500 to-blue-600",
+    color: "from-sky-500 to-gold-600",
   },
   {
     id: "7",
@@ -89,7 +89,7 @@ export const TESTIMONIALS: Testimonial[] = [
     treatment: "Orthodontic Care",
     date: "5 months ago",
     reviewCount: "8 reviews · 2 photos",
-    color: "from-cyan-500 to-teal-600",
+    color: "from-amber-500 to-stone-600",
   },
   {
     id: "9",
@@ -122,6 +122,6 @@ export const TESTIMONIALS: Testimonial[] = [
     treatment: "Root Canal & Implants",
     date: "11 months ago",
     reviewCount: "1 review",
-    color: "from-blue-500 to-indigo-600",
+    color: "from-gold-500 to-indigo-600",
   },
 ]

@@ -45,16 +45,10 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#0C1B33] text-white relative overflow-hidden">
-      {/* Decorative orbs */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[420px] h-[420px] rounded-full bg-blue-600/10 blur-[120px] -translate-y-1/2" />
-        <div className="absolute bottom-0 right-1/4 w-[360px] h-[360px] rounded-full bg-teal-600/10 blur-[100px] translate-y-1/3" />
-      </div>
-
+    <footer className="bg-[#F8F8F6] text-[#2A2A28] relative overflow-hidden border-t border-[#E8E8E4]">
       {/* Emergency Bar */}
       <div className="relative bg-gradient-to-r from-red-600 to-rose-600 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-white">
           <div className="flex items-center gap-2 font-semibold">
             <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
             Dental Emergency? We&apos;re here to help.
@@ -90,14 +84,14 @@ export function Footer() {
               alt="Shine Dental Logo"
               width={40}
               height={40}
-              className="w-10 h-10 rounded-xl object-cover shadow-lg shadow-blue-500/30"
+              className="w-10 h-10 rounded-xl object-cover shadow-md shadow-gold-900/10"
             />
             <div>
-              <p className="font-extrabold text-base text-white leading-none">Shine Dental</p>
-              <p className="text-xs text-white/40 mt-0.5">& Medical Clinic</p>
+              <p className="font-extrabold text-base text-[#2A2A28] leading-none">Shine Dental</p>
+              <p className="text-xs text-[#666666] mt-0.5">& Medical Clinic</p>
             </div>
           </div>
-          <p className="text-white/55 text-sm leading-relaxed mb-5">
+          <p className="text-[#666666] text-sm leading-relaxed mb-5">
             IBE-certified specialist endodontists providing advanced microscopic dental care with 15+ years of excellence in Muzaffarnagar.
           </p>
 
@@ -106,14 +100,14 @@ export function Footer() {
             href={CLINIC.social.google}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-full bg-white/8 hover:bg-white/12 border border-white/10 transition-colors"
+            className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-full bg-white hover:bg-gold-50 border border-[#E8E8E4] transition-colors"
           >
             <div className="flex gap-0.5">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                <Star key={i} className="w-3.5 h-3.5 fill-gold-500 text-gold-500" />
               ))}
             </div>
-            <span className="text-white/80 text-xs font-semibold">
+            <span className="text-[#2A2A28] text-xs font-semibold">
               {CLINIC.rating} · {CLINIC.ratingCount} Reviews
             </span>
           </a>
@@ -124,7 +118,7 @@ export function Footer() {
               href={CLINIC.social.google}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors"
+              className="w-9 h-9 rounded-lg bg-white border border-[#E8E8E4] hover:border-gold-300 flex items-center justify-center transition-colors"
               aria-label="Google Reviews"
             >
               <GoogleIcon className="w-4 h-4" />
@@ -133,7 +127,7 @@ export function Footer() {
               href={CLINIC.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors text-white/70 hover:text-white"
+              className="w-9 h-9 rounded-lg bg-white border border-[#E8E8E4] hover:border-gold-300 flex items-center justify-center transition-colors text-[#666666] hover:text-gold-600"
               aria-label="Facebook"
             >
               <FacebookIcon className="w-4 h-4" />
@@ -142,7 +136,7 @@ export function Footer() {
               href={CLINIC.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors text-white/70 hover:text-white"
+              className="w-9 h-9 rounded-lg bg-white border border-[#E8E8E4] hover:border-gold-300 flex items-center justify-center transition-colors text-[#666666] hover:text-gold-600"
               aria-label="Instagram"
             >
               <InstagramIcon className="w-4 h-4" />
@@ -152,15 +146,15 @@ export function Footer() {
 
         {/* Quick Links */}
         <div>
-          <p className="font-bold text-sm text-white/80 mb-4 uppercase tracking-wider">Quick Links</p>
+          <p className="font-bold text-sm text-[#2A2A28] mb-4 uppercase tracking-wider">Quick Links</p>
           <ul className="space-y-2.5">
             {QUICK_LINKS.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-sm text-white/55 hover:text-white hover:translate-x-1 transition-all flex items-center gap-2"
+                  className="text-sm text-[#666666] hover:text-gold-600 hover:translate-x-1 transition-all flex items-center gap-2"
                 >
-                  <span className="w-1 h-1 rounded-full bg-blue-400" />
+                  <span className="w-1 h-1 rounded-full bg-gold-500" />
                   {link.label}
                 </a>
               </li>
@@ -170,15 +164,15 @@ export function Footer() {
 
         {/* Services */}
         <div>
-          <p className="font-bold text-sm text-white/80 mb-4 uppercase tracking-wider">Services</p>
+          <p className="font-bold text-sm text-[#2A2A28] mb-4 uppercase tracking-wider">Services</p>
           <ul className="space-y-2.5">
             {SERVICE_LINKS.map((s) => (
               <li key={s}>
                 <a
                   href="#services"
-                  className="text-sm text-white/55 hover:text-white hover:translate-x-1 transition-all flex items-center gap-2"
+                  className="text-sm text-[#666666] hover:text-gold-600 hover:translate-x-1 transition-all flex items-center gap-2"
                 >
-                  <span className="w-1 h-1 rounded-full bg-teal-400" />
+                  <span className="w-1 h-1 rounded-full bg-gold-500" />
                   {s}
                 </a>
               </li>
@@ -188,32 +182,32 @@ export function Footer() {
 
         {/* Contact Info */}
         <div>
-          <p className="font-bold text-sm text-white/80 mb-4 uppercase tracking-wider">Contact</p>
+          <p className="font-bold text-sm text-[#2A2A28] mb-4 uppercase tracking-wider">Contact</p>
           <div className="space-y-4">
             <a href={CLINIC.mapsUrl} target="_blank" rel="noopener noreferrer" className="flex gap-3 group">
-              <MapPin className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-              <span className="text-sm text-white/55 group-hover:text-white/80 transition-colors leading-relaxed">
+              <MapPin className="w-4 h-4 text-gold-600 mt-0.5 flex-shrink-0" />
+              <span className="text-sm text-[#666666] group-hover:text-gold-600 transition-colors leading-relaxed">
                 {CLINIC.address}
               </span>
             </a>
             <a href={`tel:+91${CLINIC.phones[0]}`} className="flex gap-3 group">
-              <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
-              <span className="text-sm text-white/55 group-hover:text-white/80 transition-colors">
+              <Phone className="w-4 h-4 text-gold-600 flex-shrink-0" />
+              <span className="text-sm text-[#666666] group-hover:text-gold-600 transition-colors">
                 {CLINIC.phones[0]}
               </span>
             </a>
             <a href={`mailto:${CLINIC.email}`} className="flex gap-3 group">
-              <Mail className="w-4 h-4 text-blue-400 flex-shrink-0" />
-              <span className="text-sm text-white/55 group-hover:text-white/80 transition-colors">
+              <Mail className="w-4 h-4 text-gold-600 flex-shrink-0" />
+              <span className="text-sm text-[#666666] group-hover:text-gold-600 transition-colors">
                 {CLINIC.email}
               </span>
             </a>
             <div className="flex gap-3">
-              <Clock className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
-              <div className="text-sm text-white/55">
+              <Clock className="w-4 h-4 text-gold-600 flex-shrink-0 mt-0.5" />
+              <div className="text-sm text-[#666666]">
                 <p>Mon–Sat: 11AM–3PM</p>
                 <p>5PM–7:30PM</p>
-                <p className="text-red-400 font-semibold mt-1">Sunday: Closed</p>
+                <p className="text-red-600 font-semibold mt-1">Sunday: Closed</p>
               </div>
             </div>
           </div>
@@ -221,8 +215,8 @@ export function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="relative border-t border-white/8 py-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/35">
+      <div className="relative border-t border-[#E8E8E4] py-5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#666666]">
           <p>© {year} {CLINIC.name}. All rights reserved.</p>
           <p>
             Designed by{" "}
@@ -230,7 +224,7 @@ export function Footer() {
               href="https://www.linkedin.com/in/jasujabhavishya/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-white/60 hover:text-white transition-colors"
+              className="font-semibold text-[#2A2A28] hover:text-gold-600 transition-colors"
             >
               Bhavishya Jasuja
             </a>

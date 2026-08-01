@@ -42,7 +42,7 @@ export function SectionHeading({
               "inline-flex items-center gap-2 text-xs font-bold tracking-[2px] uppercase px-4 py-1.5 rounded-full",
               light
                 ? "bg-white/10 border border-white/20 text-white/90"
-                : "bg-blue-50 border border-blue-100 text-blue-700"
+                : "bg-gold-50 border border-gold-100 text-gold-700"
             )}
           >
             {eyebrow}
@@ -57,7 +57,7 @@ export function SectionHeading({
         transition={{ duration: 0.55, delay: 0.05 }}
         className={cn(
           "text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15]",
-          light ? "text-white" : "text-[#0C1B33]"
+          light ? "text-white" : "text-[#2A2A28]"
         )}
       >
         {title}{" "}

@@ -24,7 +24,7 @@ export const CLINIC = {
     google:
       "https://www.google.com/search?q=Shine+Dental+and+Medical+Clinic+Muzaffarnagar#lrd=0x390c1b0bb95b893d:0x5cc412006cf30aff,1,,,,",
   },
-  rating: "4.8",
+  rating: "5.0",
   ratingCount: "122",
   // Precise link to the clinic's actual Google Business Profile (via its CID), not a generic search.
   mapsUrl: "https://www.google.com/maps?cid=6684487539961826047",

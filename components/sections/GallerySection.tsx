@@ -24,6 +24,8 @@ const GALLERY = [
   { src: "/images/gallery/AB901400.jpg", alt: "Dental Clinic", orientation: "landscape" },
   { src: "/images/gallery/AB901401.jpg", alt: "Interior View", orientation: "landscape" },
   { src: "/images/gallery/AB901412.jpg", alt: "Facility Tour", orientation: "landscape" },
+  { src: "/images/gallery/dr-shefali-reception.jpg", alt: "Dr. Shefali Gupta at Shine Dental", orientation: "portrait" },
+  { src: "/images/gallery/dr-jatin-microscope-standing.jpg", alt: "Dr. Jatin Gupta with Endodontic Microscope", orientation: "portrait" },
 ] as const
 
 export function GallerySection() {
@@ -85,10 +87,10 @@ export function GallerySection() {
                 sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0C1B33]/70 via-[#0C1B33]/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A28]/70 via-[#2A2A28]/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 w-11 h-11 rounded-full bg-white/95 flex items-center justify-center shadow-lg">
-                  <Expand className="w-4.5 h-4.5 text-[#1565C0]" />
+                  <Expand className="w-4.5 h-4.5 text-[#B8935A]" />
                 </div>
               </div>
               <p className="absolute bottom-3 left-3 right-3 text-white text-xs font-semibold opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">

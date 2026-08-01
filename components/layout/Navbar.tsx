@@ -27,7 +27,7 @@ export function Navbar() {
       {/* Top Banner */}
       <div
         className="hidden md:block fixed top-0 left-0 right-0 z-50 text-white/85 text-xs py-2 border-b border-white/10"
-        style={{ background: "linear-gradient(90deg, #0C1B33, #16294f, #0C1B33)" }}
+        style={{ background: "linear-gradient(90deg, #2A2A28, #3A3A36, #2A2A28)" }}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-5">
@@ -39,71 +39,56 @@ export function Navbar() {
             </a>
             <span className="w-px h-3 bg-white/15" />
             <span className="flex items-center gap-1.5">
-              <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+              <Star className="w-3 h-3 fill-gold-400 text-gold-400" />
               <strong className="text-white">{CLINIC.rating}</strong> · {CLINIC.ratingCount} Google Reviews
             </span>
           </div>
           <div className="flex items-center gap-1.5 text-white/65">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             Mon–Sat · 11AM–3PM & 5PM–7:30PM
+            <span className="text-white/30">|</span>
+            <span className="text-rose-300/90 font-semibold">Sunday: Closed</span>
           </div>
         </div>
       </div>
 
-      {/* Main Navbar */}
+      {/* Main Navbar — always light, subtle shadow once scrolled */}
       <motion.nav
-        initial={false}
-        animate={isScrolled ? "scrolled" : "top"}
         className={cn(
-          "fixed left-0 right-0 z-40 transition-all duration-300",
-          "md:top-[29px]",
-          "top-0"
+          "fixed left-0 right-0 z-40 md:top-[29px] top-0 bg-white transition-shadow duration-300",
+          isScrolled ? "shadow-[0_2px_20px_rgba(42,42,40,0.08)]" : "shadow-none"
         )}
       >
-        <motion.div
-          variants={{
-            top: { background: "rgba(255,255,255,0)", boxShadow: "none" },
-            scrolled: {
-              background: "rgba(255,255,255,0.92)",
-              boxShadow: "0 2px 20px rgba(12,27,51,0.08)",
-            },
-          }}
-          transition={{ duration: 0.2 }}
-          style={{ backdropFilter: isScrolled ? "blur(20px)" : "none" }}
-          className="relative border-b border-transparent"
-        >
+        <div className="relative border-b border-[#E8E8E4]">
           {/* Accent underline */}
           <div
             className={cn(
-              "absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-500 transition-opacity duration-300",
+              "absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-gold-600 via-gold-500 to-gold-400 transition-opacity duration-300",
               isScrolled ? "opacity-100" : "opacity-0"
             )}
           />
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center h-16 gap-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center h-20 gap-4">
             {/* Logo */}
             <a href="#doctors" className="group flex items-center gap-3 flex-shrink-0">
               <div className="relative">
-                <div className="absolute -inset-1 rounded-xl bg-gradient-to-br from-blue-500/50 to-cyan-400/40 blur-sm opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute -inset-1.5 rounded-2xl bg-gold-400/30 blur-sm opacity-0 group-hover:opacity-100 transition-opacity" />
                 <Image
                   src="/images/logo/logo.jpeg"
                   alt="Shine Dental Logo"
-                  width={36}
-                  height={36}
-                  className="relative w-9 h-9 rounded-xl object-cover shadow-md shadow-blue-500/30 ring-2 ring-white/10"
+                  width={52}
+                  height={52}
+                  priority
+                  className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl object-cover shadow-md shadow-gold-900/15 ring-2 ring-[#E8E8E4]"
                 />
               </div>
               <div>
-                <p className={cn(
-                  "font-extrabold text-sm leading-none transition-colors",
-                  isScrolled ? "text-[#0C1B33]" : "text-white"
-                )}>
+                <p className="font-extrabold text-lg sm:text-xl leading-tight tracking-tight text-[#2A2A28]">
                   Shine Dental
                 </p>
-                <p className={cn(
-                  "text-[10px] font-medium transition-colors",
-                  isScrolled ? "text-slate-400" : "text-white/60"
-                )}>& Medical Clinic</p>
+                <p className="text-[11px] sm:text-xs font-semibold tracking-wide text-[#666666]">
+                  & Medical Clinic
+                </p>
               </div>
             </a>
 
@@ -115,12 +100,7 @@ export function Navbar() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className={cn(
-                      "nav-link-underline px-3 py-2 text-sm font-semibold transition-colors rounded-lg",
-                      isScrolled
-                        ? "text-slate-600 hover:text-[#1565C0] hover:bg-blue-50"
-                        : "text-white/85 hover:text-white hover:bg-white/10"
-                    )}
+                    className="nav-link-underline px-3 py-2 text-sm font-semibold text-[#2A2A28] hover:text-gold-600 hover:bg-gold-50 rounded-lg transition-colors"
                   >
                     {link.label}
                   </a>
@@ -132,19 +112,14 @@ export function Navbar() {
             <div className="hidden md:flex items-center gap-2 ml-2">
               <a
                 href={`tel:+91${CLINIC.primaryPhone}`}
-                className={cn(
-                  "flex items-center gap-1.5 px-3 py-2 text-sm font-semibold transition-colors rounded-lg",
-                  isScrolled
-                    ? "text-slate-600 hover:text-[#1565C0] hover:bg-blue-50"
-                    : "text-white/85 hover:text-white hover:bg-white/10"
-                )}
+                className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-[#2A2A28] hover:text-gold-600 hover:bg-gold-50 rounded-lg transition-colors"
               >
                 <Phone className="w-3.5 h-3.5" />
                 <span className="hidden xl:inline">Call Now</span>
               </a>
               <a
                 href="#contact"
-                className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-[#1565C0] to-[#0EA5E9] hover:from-blue-700 hover:to-cyan-600 text-white text-sm font-bold shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all"
+                className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#B8935A] hover:bg-[#A17F49] text-white text-sm font-bold shadow-md shadow-gold-900/15 hover:-translate-y-0.5 transition-all"
               >
                 <Calendar className="w-3.5 h-3.5" />
                 Book Appointment
@@ -154,18 +129,13 @@ export function Navbar() {
             {/* Mobile toggle */}
             <button
               onClick={() => setMenuOpen(true)}
-              className={cn(
-                "md:hidden w-10 h-10 flex items-center justify-center rounded-xl transition-colors",
-                isScrolled
-                  ? "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                  : "bg-white/10 text-white hover:bg-white/20"
-              )}
+              className="md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-[#F8F8F6] text-[#2A2A28] hover:bg-gold-50 transition-colors"
               aria-label="Open menu"
             >
               <Menu className="w-5 h-5" />
             </button>
           </div>
-        </motion.div>
+        </div>
       </motion.nav>
 
       <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />

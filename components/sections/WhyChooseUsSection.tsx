@@ -56,11 +56,11 @@ const FEATURES = [
 ]
 
 const colorMap = {
-  blue: { bg: "bg-blue-50", icon: "text-blue-600", border: "border-blue-100", hover: "hover:border-blue-200" },
+  blue: { bg: "bg-gold-50", icon: "text-gold-600", border: "border-gold-100", hover: "hover:border-gold-200" },
   gold: { bg: "bg-amber-50", icon: "text-amber-600", border: "border-amber-100", hover: "hover:border-amber-200" },
-  teal: { bg: "bg-teal-50", icon: "text-teal-600", border: "border-teal-100", hover: "hover:border-teal-200" },
+  teal: { bg: "bg-stone-50", icon: "text-stone-600", border: "border-stone-100", hover: "hover:border-stone-200" },
   rose: { bg: "bg-rose-50", icon: "text-rose-600", border: "border-rose-100", hover: "hover:border-rose-200" },
-  cyan: { bg: "bg-cyan-50", icon: "text-cyan-600", border: "border-cyan-100", hover: "hover:border-cyan-200" },
+  cyan: { bg: "bg-amber-50", icon: "text-amber-600", border: "border-amber-100", hover: "hover:border-amber-200" },
 }
 
 export function WhyChooseUsSection() {
@@ -90,7 +90,7 @@ export function WhyChooseUsSection() {
                 <div className={`w-11 h-11 ${colors.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <feature.icon className={`w-5 h-5 ${colors.icon}`} />
                 </div>
-                <h3 className="font-bold text-[#0C1B33] text-sm mb-1.5 leading-snug">
+                <h3 className="font-bold text-[#2A2A28] text-sm mb-1.5 leading-snug">
                   {feature.title}
                 </h3>
                 <p className="text-slate-500 text-sm leading-relaxed">{feature.description}</p>

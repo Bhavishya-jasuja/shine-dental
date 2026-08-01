@@ -66,11 +66,11 @@ export function AboutClinicSection() {
               className="absolute -bottom-4 -left-4 glass rounded-2xl p-4 shadow-premium"
             >
               <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-blue-100 flex items-center justify-center">
-                  <Clock className="w-4 h-4 text-blue-600" />
+                <div className="w-9 h-9 rounded-xl bg-gold-100 flex items-center justify-center">
+                  <Clock className="w-4 h-4 text-gold-600" />
                 </div>
                 <div>
-                  <p className="text-xs font-extrabold text-[#0C1B33]">Mon – Sat</p>
+                  <p className="text-xs font-extrabold text-[#2A2A28]">Mon – Sat</p>
                   <p className="text-[11px] text-slate-400">11AM–3PM · 5PM–7:30PM</p>
                 </div>
               </div>
@@ -84,11 +84,11 @@ export function AboutClinicSection() {
               className="absolute -top-4 -right-4 glass rounded-2xl p-4 shadow-premium"
             >
               <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-teal-100 flex items-center justify-center">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                <div className="w-9 h-9 rounded-xl bg-stone-100 flex items-center justify-center">
+                  <CheckCircle className="w-4 h-4 text-stone-600" />
                 </div>
                 <div>
-                  <p className="text-xs font-extrabold text-[#0C1B33]">ISO Standards</p>
+                  <p className="text-xs font-extrabold text-[#2A2A28]">ISO Standards</p>
                   <p className="text-[11px] text-slate-400">International Sterilization</p>
                 </div>
               </div>
@@ -103,16 +103,16 @@ export function AboutClinicSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.55 }}
             >
-              <h3 className="text-2xl font-extrabold text-[#0C1B33] mb-2">
+              <h3 className="text-2xl font-extrabold text-[#2A2A28] mb-2">
                 {CLINIC.name}
               </h3>
               <div className="flex items-center gap-1.5 mb-5">
-                <MapPin className="w-4 h-4 text-blue-600" />
+                <MapPin className="w-4 h-4 text-gold-600" />
                 <a
                   href={CLINIC.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-slate-500 hover:text-blue-600 transition-colors"
+                  className="text-sm text-slate-500 hover:text-gold-600 transition-colors"
                 >
                   {CLINIC.addressShort}
                 </a>
@@ -137,7 +137,7 @@ export function AboutClinicSection() {
                     transition={{ delay: i * 0.07 }}
                     className="flex items-start gap-2.5"
                   >
-                    <CheckCircle className="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-stone-500 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-slate-600">{h}</span>
                   </motion.div>
                 ))}
@@ -147,7 +147,7 @@ export function AboutClinicSection() {
               <div className="flex flex-wrap gap-3">
                 <a
                   href={`tel:+91${CLINIC.primaryPhone}`}
-                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#1565C0] text-white text-sm font-bold hover:bg-blue-700 transition-colors shadow-md shadow-blue-500/20"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#B8935A] text-white text-sm font-bold hover:bg-gold-700 transition-colors shadow-md shadow-gold-500/20"
                 >
                   <Phone className="w-4 h-4" />
                   Call Clinic
@@ -156,9 +156,9 @@ export function AboutClinicSection() {
                   href={CLINIC.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 text-sm font-semibold hover:border-blue-300 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 text-sm font-semibold hover:border-gold-300 transition-colors"
                 >
-                  <MapPin className="w-4 h-4 text-blue-600" />
+                  <MapPin className="w-4 h-4 text-gold-600" />
                   View on Maps
                 </a>
               </div>

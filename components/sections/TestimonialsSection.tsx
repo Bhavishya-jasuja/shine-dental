@@ -13,14 +13,14 @@ type Testimonial = (typeof TESTIMONIALS)[number]
 function ReviewCardContent({ t }: { t: Testimonial }) {
   return (
     <div className="relative glass rounded-3xl shadow-premium p-6 sm:p-8 h-[400px] sm:h-[420px] flex flex-col">
-      <Quote className="absolute top-6 right-6 w-9 h-9 text-blue-500/10" />
+      <Quote className="absolute top-6 right-6 w-9 h-9 text-gold-500/10" />
 
       <div className="flex items-center gap-3 mb-4">
         <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${t.color} flex items-center justify-center text-white text-base font-extrabold shrink-0`}>
           {t.initials}
         </div>
         <div className="min-w-0 flex-1">
-          <p className="font-bold text-[#0C1B33] text-sm sm:text-base truncate">{t.name}</p>
+          <p className="font-bold text-[#2A2A28] text-sm sm:text-base truncate">{t.name}</p>
           <p className="text-xs text-slate-500">{t.reviewCount}</p>
         </div>
         <GoogleIcon className="w-6 h-6 shrink-0" />
@@ -39,7 +39,7 @@ function ReviewCardContent({ t }: { t: Testimonial }) {
         {t.text}
       </p>
 
-      <span className="mt-4 inline-flex w-fit items-center text-[10px] font-bold px-2.5 py-1 rounded-full bg-blue-50/80 text-blue-700 border border-blue-100">
+      <span className="mt-4 inline-flex w-fit items-center text-[10px] font-bold px-2.5 py-1 rounded-full bg-gold-50/80 text-gold-700 border border-gold-100">
         {t.treatment}
       </span>
     </div>
@@ -98,11 +98,11 @@ export function TestimonialsSection() {
   const nextReview = TESTIMONIALS[(current + 1) % total]
 
   return (
-    <section id="testimonials" className="py-20 sm:py-28 bg-gradient-to-b from-slate-50 via-blue-50/30 to-slate-50 relative overflow-hidden">
+    <section id="testimonials" className="py-20 sm:py-28 bg-gradient-to-b from-slate-50 via-gold-50/30 to-slate-50 relative overflow-hidden">
       {/* Decorative color orbs for glass effect */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-[8%] w-[380px] h-[380px] rounded-full bg-blue-300/25 blur-[100px]" />
-        <div className="absolute bottom-10 right-[8%] w-[340px] h-[340px] rounded-full bg-teal-300/25 blur-[90px]" />
+        <div className="absolute top-10 left-[8%] w-[380px] h-[380px] rounded-full bg-gold-300/25 blur-[100px]" />
+        <div className="absolute bottom-10 right-[8%] w-[340px] h-[340px] rounded-full bg-stone-300/25 blur-[90px]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-amber-200/20 blur-[100px]" />
       </div>
 
@@ -126,7 +126,7 @@ export function TestimonialsSection() {
             <GoogleIcon className="w-9 h-9 shrink-0" />
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-3xl font-extrabold text-[#0C1B33]">{CLINIC.rating}</span>
+                <span className="text-3xl font-extrabold text-[#2A2A28]">{CLINIC.rating}</span>
                 <div className="flex gap-0.5">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
@@ -134,7 +134,7 @@ export function TestimonialsSection() {
                 </div>
               </div>
               <p className="text-slate-600 text-sm">
-                Based on <strong className="text-[#0C1B33]">{CLINIC.ratingCount} Google reviews</strong>
+                Based on <strong className="text-[#2A2A28]">{CLINIC.ratingCount} Google reviews</strong>
               </p>
             </div>
           </div>
@@ -143,7 +143,7 @@ export function TestimonialsSection() {
             href={CLINIC.social.google}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#1565C0] hover:bg-blue-700 text-white text-sm font-bold shadow-md shadow-blue-500/20 transition-colors"
+            className="flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#B8935A] hover:bg-gold-700 text-white text-sm font-bold shadow-md shadow-gold-500/20 transition-colors"
           >
             Read All Reviews on Google
             <ExternalLink className="w-3.5 h-3.5" />
@@ -202,14 +202,14 @@ export function TestimonialsSection() {
           <button
             onClick={prev}
             aria-label="Previous review"
-            className="absolute left-0 sm:left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-11 sm:h-11 rounded-full glass shadow-md flex items-center justify-center text-[#0C1B33] hover:bg-white/90 transition-colors"
+            className="absolute left-0 sm:left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-11 sm:h-11 rounded-full glass shadow-md flex items-center justify-center text-[#2A2A28] hover:bg-white/90 transition-colors"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={next}
             aria-label="Next review"
-            className="absolute right-0 sm:right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#1565C0] shadow-md flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+            className="absolute right-0 sm:right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#B8935A] shadow-md flex items-center justify-center text-white hover:bg-gold-700 transition-colors"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
@@ -223,7 +223,7 @@ export function TestimonialsSection() {
               onClick={() => goTo(i, i > current ? 1 : -1)}
               aria-label={`Go to review ${i + 1}`}
               className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === current ? "w-6 bg-[#1565C0]" : "w-1.5 bg-slate-300"
+                i === current ? "w-6 bg-[#B8935A]" : "w-1.5 bg-slate-300"
               }`}
             />
           ))}

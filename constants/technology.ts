@@ -43,4 +43,11 @@ export const TECHNOLOGIES: Technology[] = [
     icon: "settings",
     highlight: "NiTi Rotary Files",
   },
+  {
+    title: "Facial Aesthetics",
+    description:
+      "Advanced skin and facial rejuvenation treatments performed alongside your dental care.",
+    icon: "sparkles",
+    highlight: "Skin & Smile Care",
+  },
 ]

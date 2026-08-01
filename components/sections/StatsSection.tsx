@@ -8,13 +8,13 @@ const STATS = [
   { value: 15, suffix: "+", label: "Years of Excellence", icon: Calendar, color: "blue" },
   { value: 10000, suffix: "+", label: "Happy Patients", icon: Users, color: "teal" },
   { value: 50000, suffix: "+", label: "Treatments Done", icon: Activity, color: "cyan" },
-  { value: 48, suffix: "", label: "Google Rating", icon: Star, color: "gold", decimals: 1, display: "4.8★" },
+  { value: 50, suffix: "", label: "Google Rating", icon: Star, color: "gold", decimals: 1, display: "5.0★" },
 ]
 
 const colorMap = {
-  blue: { bg: "bg-blue-50", icon: "text-blue-600", number: "text-blue-600" },
-  teal: { bg: "bg-teal-50", icon: "text-teal-600", number: "text-teal-600" },
-  cyan: { bg: "bg-cyan-50", icon: "text-cyan-600", number: "text-cyan-600" },
+  blue: { bg: "bg-gold-50", icon: "text-gold-600", number: "text-gold-600" },
+  teal: { bg: "bg-stone-50", icon: "text-stone-600", number: "text-stone-600" },
+  cyan: { bg: "bg-amber-50", icon: "text-amber-600", number: "text-amber-600" },
   gold: { bg: "bg-amber-50", icon: "text-amber-500", number: "text-amber-600" },
 }
 

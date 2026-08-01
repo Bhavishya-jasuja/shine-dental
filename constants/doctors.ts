@@ -8,7 +8,7 @@ export const DOCTORS: Doctor[] = [
     qualifications: "BDS, MDS (Conservative Dentistry & Endodontics)",
     specialization: "Microscopic Endodontics & Dental Implants",
     experience: "15+",
-    image: "/images/dr-jatin.jpeg",
+    image: "/images/dr-jatin-main.jpeg",
     badge: "IBE Certified",
     bio: "Pioneer in microscopic root canal treatment with international training across Europe, recognized by the Indian Board of Endodontics.",
     credentials: [
@@ -45,7 +45,7 @@ export const DOCTORS: Doctor[] = [
     qualifications: "BDS, MDS (Conservative Dentistry & Endodontics)",
     specialization: "Cosmetic Dentistry & Pediatric Endodontics",
     experience: "12+",
-    image: "/images/dr-shefali.jpeg",
+    image: "/images/dr-shefali-main.jpeg",
     badge: "MDS Specialist",
     bio: "Expert in cosmetic dentistry and pediatric care with multiple peer-reviewed international publications and academic experience.",
     credentials: [
