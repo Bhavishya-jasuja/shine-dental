@@ -69,6 +69,15 @@ export function ServicesSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A28]/50 to-transparent" />
 
+                  {/* Ambient shine sweep — auto-loops so it also plays on mobile (no hover) */}
+                  <motion.div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{ background: "linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.16) 50%, transparent 65%)" }}
+                    initial={{ x: "-100%" }}
+                    animate={{ x: "100%" }}
+                    transition={{ duration: 1, repeat: Infinity, repeatDelay: 2.5, delay: i * 0.3, ease: "easeInOut" }}
+                  />
+
                   {service.badge && (
                     <div className="absolute top-3 left-3">
                       <span className={`text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-md shadow-sm ${BADGE_STYLES[service.badge.variant]}`}>

@@ -52,17 +52,27 @@ export function DoctorsSection() {
                 <div className="relative mx-auto lg:mx-0">
                   {/* Glow ring */}
                   <div className="absolute -inset-4 rounded-[2rem] bg-gold-200/25 blur-2xl" />
-                  <div className="relative overflow-hidden rounded-[1.75rem] shadow-xl border border-[#E8E8E4]">
+                  <div className="group relative overflow-hidden rounded-[1.75rem] shadow-xl border border-[#E8E8E4]">
                     <Image
                       src={doctor.image}
                       alt={doctor.name}
                       width={480}
                       height={320}
                       priority={idx === 0}
-                      className="w-full aspect-[3/2] object-cover"
+                      className="w-full aspect-[3/2] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
                     {/* Overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A28]/70 via-[#2A2A28]/5 to-transparent" />
+
+                    {/* Ambient shine sweep — slower, more elegant; auto-loops so it also plays on mobile (no hover) */}
+                    <motion.div
+                      className="absolute inset-0 pointer-events-none"
+                      style={{ background: "linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.13) 50%, transparent 65%)" }}
+                      initial={{ x: "-100%" }}
+                      animate={{ x: "100%" }}
+                      transition={{ duration: 1.6, repeat: Infinity, repeatDelay: 3.5, delay: idx * 0.6, ease: "easeInOut" }}
+                    />
+
                     <div className="absolute bottom-0 left-0 right-0 p-5">
                       <p className="text-white font-bold text-xl leading-tight">{doctor.name}</p>
                       <p className="text-white/70 text-sm mt-1">{doctor.title}</p>

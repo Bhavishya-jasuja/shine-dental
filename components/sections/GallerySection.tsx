@@ -89,6 +89,16 @@ export function GallerySection() {
                 className="object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A28]/75 via-[#2A2A28]/10 to-transparent" />
+
+              {/* Ambient shine sweep — auto-loops so it also plays on mobile (no hover) */}
+              <motion.div
+                className="absolute inset-0 pointer-events-none"
+                style={{ background: "linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.2) 50%, transparent 65%)" }}
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{ duration: 0.85, repeat: Infinity, repeatDelay: 2.2, delay: (i % 6) * 0.25, ease: "easeInOut" }}
+              />
+
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 w-11 h-11 rounded-full bg-white/95 flex items-center justify-center shadow-lg">
                   <Expand className="w-4.5 h-4.5 text-[#B8935A]" />

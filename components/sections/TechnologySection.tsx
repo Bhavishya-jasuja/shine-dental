@@ -56,9 +56,8 @@ export function TechnologySection() {
                 whileHover={{ y: -6 }}
                 className="group relative rounded-2xl border border-[#E8E8E4] bg-white overflow-hidden hover:border-gold-300 hover:shadow-xl hover:shadow-gold-900/10 transition-all duration-300"
               >
-                {/* Real photo header if available */}
                 {img ? (
-                  <div className="relative aspect-square overflow-hidden">
+                  <div className="relative h-80 sm:h-[22rem] overflow-hidden">
                     <Image
                       src={img}
                       alt={tech.title}
@@ -67,36 +66,50 @@ export function TechnologySection() {
                       className="object-cover group-hover:scale-[1.06] transition-transform duration-500 ease-out"
                     />
 
-                    {/* Hover shine sweep */}
-                    <div
-                      className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-[1100ms] ease-out pointer-events-none"
+                    {/* Overall darkening — keeps every glass element legible on any photo */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A28]/85 via-[#2A2A28]/15 to-[#2A2A28]/10" />
+
+                    {/* Ambient shine sweep — auto-loops so it also plays on mobile (no hover) */}
+                    <motion.div
+                      className="absolute inset-0 pointer-events-none"
                       style={{ background: "linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.14) 50%, transparent 65%)" }}
+                      initial={{ x: "-100%" }}
+                      animate={{ x: "100%" }}
+                      transition={{ duration: 1.3, repeat: Infinity, repeatDelay: 2.8, delay: i * 0.4, ease: "easeInOut" }}
                     />
 
-                    <span className="absolute top-3 left-3 text-[10px] font-bold px-2.5 py-1 rounded-full bg-black/45 text-white border border-white/15 backdrop-blur-sm">
+                    <span
+                      className="absolute top-3 left-3 text-[10px] font-bold px-2.5 py-1 rounded-full text-white border border-white/30 shadow-sm"
+                      style={{
+                        background: "rgba(255,255,255,0.14)",
+                        backdropFilter: "blur(10px) saturate(160%)",
+                        WebkitBackdropFilter: "blur(10px) saturate(160%)",
+                      }}
+                    >
                       {tech.highlight}
                     </span>
+
+                    {/* Text — no panel, floats directly on the photo */}
+                    <div className="absolute inset-x-4 bottom-4">
+                      <div className="w-9 h-9 rounded-lg bg-white/15 border border-white/25 flex items-center justify-center mb-2.5 group-hover:bg-white/25 transition-colors">
+                        <Icon className="w-4 h-4 text-white" />
+                      </div>
+                      <h3 className="text-white font-bold text-base mb-1.5 leading-snug">{tech.title}</h3>
+                      <p className="text-white/75 text-xs leading-relaxed">{tech.description}</p>
+                    </div>
                   </div>
                 ) : (
-                  <div className="p-6 pb-0">
+                  <div className="p-6">
                     <div className="w-12 h-12 rounded-xl bg-gold-50 border border-gold-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                       <Icon className="w-5 h-5 text-gold-600" />
                     </div>
                     <span className="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#F8F8F6] text-[#666666] border border-[#E8E8E4] mb-3">
                       {tech.highlight}
                     </span>
+                    <h3 className="text-[#2A2A28] font-bold text-base mb-2 leading-snug">{tech.title}</h3>
+                    <p className="text-[#666666] text-sm leading-relaxed">{tech.description}</p>
                   </div>
                 )}
-
-                <div className="p-5 pt-4">
-                  {img && (
-                    <div className="w-9 h-9 rounded-lg bg-gold-50 border border-gold-100 flex items-center justify-center mb-3 group-hover:bg-gold-100 group-hover:scale-110 transition-all">
-                      <Icon className="w-4 h-4 text-gold-600" />
-                    </div>
-                  )}
-                  <h3 className="text-[#2A2A28] font-bold text-base mb-2 leading-snug">{tech.title}</h3>
-                  <p className="text-[#666666] text-sm leading-relaxed">{tech.description}</p>
-                </div>
               </motion.div>
             )
           })}
