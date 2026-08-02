@@ -4,14 +4,14 @@ export const TECHNOLOGIES: Technology[] = [
   {
     title: "Surgical Microscope",
     description:
-      "25× magnification for precision root canal treatment — the gold standard in endodontics.",
+      "25× magnification for precision root canal treatment, the gold standard in endodontics.",
     icon: "microscope",
     highlight: "25× Magnification",
   },
   {
     title: "Intraoral Scanner",
     description:
-      "3D digital impressions for crowns, bridges, and aligners — no messy traditional molds.",
+      "3D digital impressions for crowns, bridges, and aligners, no messy traditional molds.",
     icon: "scan-face",
     highlight: "Digital 3D Scans",
   },

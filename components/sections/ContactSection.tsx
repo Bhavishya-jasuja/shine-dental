@@ -101,7 +101,7 @@ export function ContactSection() {
     {
       icon: Clock,
       label: "Hours",
-      value: "Mon–Sat: 11AM–3PM & 5PM–7:30PM\nSunday: Closed",
+      value: `${CLINIC.hours.weekdays.label}: ${CLINIC.hours.weekdays.time}\nSunday: Closed`,
       color: "violet" as const,
     },
   ]

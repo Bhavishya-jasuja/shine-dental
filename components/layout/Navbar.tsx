@@ -28,26 +28,33 @@ export function Navbar() {
       <div className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-[#F8F8F6] border-b border-[#E8E8E4]">
         <div className="max-w-7xl mx-auto px-6 h-9 flex items-center justify-between text-xs text-[#2A2A28]/70">
           <div className="flex items-center gap-2.5 pl-1 pr-3.5 py-1 rounded-full bg-white border border-[#E8E8E4]">
-            <a href={`tel:+91${CLINIC.primaryPhone}`} className="flex items-center gap-1.5 pl-0.5 font-semibold text-[#2A2A28] hover:text-gold-600 transition-colors">
-              <span className="w-5 h-5 rounded-full bg-gold-50 flex items-center justify-center text-gold-600">
-                <Phone className="w-2.5 h-2.5" />
-              </span>
-              {CLINIC.primaryPhone}
-            </a>
+            <span className="w-5 h-5 rounded-full bg-gold-50 flex items-center justify-center text-gold-600 shrink-0">
+              <Phone className="w-2.5 h-2.5" />
+            </span>
+            <span className="flex items-center gap-1.5 font-semibold text-[#2A2A28]">
+              {CLINIC.phones.map((phone, idx) => (
+                <span key={phone} className="flex items-center gap-1.5">
+                  <a href={`tel:+91${phone}`} className="hover:text-gold-600 transition-colors">
+                    {phone}
+                  </a>
+                  {idx < CLINIC.phones.length - 1 && <span className="text-[#D8D4CC]">/</span>}
+                </span>
+              ))}
+            </span>
             <span className="w-px h-3 bg-[#E8E8E4]" />
             <span className="flex items-center gap-1">
               <Star className="w-3 h-3 fill-gold-500 text-gold-500" />
               <strong className="text-[#2A2A28] font-semibold">{CLINIC.rating}</strong>
-              <span>· {CLINIC.ratingCount} Google Reviews</span>
             </span>
           </div>
-          <div className="flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-white border border-[#E8E8E4]">
+          <div className="flex items-center gap-3 px-4 py-1.5 rounded-full bg-white border border-[#E8E8E4]">
             <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#8DAA91]" />
-              Mon–Sat · 11AM–3PM &amp; 5PM–7:30PM
+              <span className="w-1.5 h-1.5 rounded-full bg-[#8DAA91] shrink-0" />
+              <span className="font-bold text-[#2A2A28]">{CLINIC.hours.weekdays.label}</span>
+              <span className="text-[11px] font-bold text-gold-700">· {CLINIC.hours.weekdays.time}</span>
             </span>
             <span className="w-px h-3 bg-[#E8E8E4]" />
-            <span className="text-gold-700 font-semibold">Sunday: Closed</span>
+            <span className="font-bold" style={{ color: "#A35A5A" }}>Sunday: Closed</span>
           </div>
         </div>
       </div>

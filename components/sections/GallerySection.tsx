@@ -7,26 +7,27 @@ import { X, ChevronLeft, ChevronRight, Expand } from "lucide-react"
 import { SectionHeading } from "@/components/shared/SectionHeading"
 
 const GALLERY = [
-  { src: "/images/hospital.png", alt: "Shine Dental and Medical Clinic building", orientation: "landscape" },
-  { src: "/images/gallery/AB901295.jpg", alt: "Shine Dental Clinic", orientation: "landscape" },
+  { src: "/images/hospital.png", alt: "Shine Dental and Medical Clinic", orientation: "landscape" },
+  { src: "/images/gallery/AB901295.jpg", alt: "Doctors Room", orientation: "landscape" },
   { src: "/images/gallery/AB901301.jpg", alt: "Treatment Room", orientation: "portrait" },
   { src: "/images/gallery/AB901304.jpg", alt: "Dental Equipment", orientation: "landscape" },
-  { src: "/images/gallery/AB901313.jpg", alt: "Clinic Interior", orientation: "landscape" },
-  { src: "/images/gallery/AB901330.jpg", alt: "Patient Area", orientation: "landscape" },
-  { src: "/images/gallery/AB901337.jpg", alt: "Advanced Technology", orientation: "landscape" },
-  { src: "/images/gallery/AB901341.jpg", alt: "Sterilization Unit", orientation: "landscape" },
+  { src: "/images/gallery/AB901313.jpg", alt: "Microscopic Area", orientation: "landscape" },
+  { src: "/images/gallery/AB901330.jpg", alt: "Operatory", orientation: "landscape" },
+  { src: "/images/gallery/AB901337.jpg", alt: "Operatory", orientation: "landscape" },
+  { src: "/images/gallery/AB901341.jpg", alt: "Hall of Fame", orientation: "landscape" },
+  { src: "/images/gallery/AB901412.jpg", alt: "Hall of Fame", orientation: "landscape" },
   { src: "/images/gallery/AB901344.jpg", alt: "Reception Area", orientation: "landscape" },
-  { src: "/images/gallery/AB901350.jpg", alt: "Dental Suite", orientation: "portrait" },
-  { src: "/images/gallery/AB901352.jpg", alt: "Treatment Chair", orientation: "landscape" },
-  { src: "/images/gallery/AB901354.jpg", alt: "Clinic Facility", orientation: "landscape" },
-  { src: "/images/gallery/AB901369.jpg", alt: "Shine Dental", orientation: "landscape" },
-  { src: "/images/gallery/AB901390.jpg", alt: "Modern Clinic", orientation: "landscape" },
-  { src: "/images/gallery/AB901395.jpg", alt: "Clinic Gallery", orientation: "landscape" },
-  { src: "/images/gallery/AB901400.jpg", alt: "Dental Clinic", orientation: "landscape" },
-  { src: "/images/gallery/AB901401.jpg", alt: "Interior View", orientation: "landscape" },
-  { src: "/images/gallery/AB901412.jpg", alt: "Facility Tour", orientation: "landscape" },
-  { src: "/images/gallery/dr-shefali-reception.jpg", alt: "Dr. Shefali Gupta at Shine Dental", orientation: "portrait" },
-  { src: "/images/gallery/dr-jatin-microscope-standing.jpg", alt: "Dr. Jatin Gupta with Endodontic Microscope", orientation: "portrait" },
+  { src: "/images/gallery/AB901350.jpg", alt: "OPG Machine Room", orientation: "portrait" },
+  { src: "/images/gallery/AB901352.jpg", alt: "Computer Room", orientation: "landscape" },
+  { src: "/images/gallery/AB901354.jpg", alt: "Physician Room", orientation: "landscape" },
+  { src: "/images/gallery/AB901369.jpg", alt: "Doctor Chamber", orientation: "landscape" },
+  { src: "/images/gallery/AB901390.jpg", alt: "Advanced Treatment Room", orientation: "landscape" },
+  { src: "/images/gallery/AB901395.jpg", alt: "Patient Recovery Room", orientation: "landscape" },
+  { src: "/images/gallery/AB901400.jpg", alt: "Corridor", orientation: "landscape" },
+  { src: "/images/gallery/AB901401.jpg", alt: "Waiting Area", orientation: "landscape" },
+  { src: "/images/gallery/dr-shefali-reception.jpg", alt: "Dr. Shefali Gupta\nat Shine Dental", orientation: "portrait" },
+  { src: "/images/gallery/dr-jatin-microscope-standing.jpg", alt: "Dr. Jatin Gupta\nwith Endodontic Microscope", orientation: "portrait" },
+  { src: "/images/microscope-treatment.jpeg", alt: "Microscopic Single Visit Root Canal Treatment", orientation: "wide" },
 ] as const
 
 export function GallerySection() {
@@ -60,7 +61,7 @@ export function GallerySection() {
           eyebrow="Our Facility"
           title="A Clinic Designed"
           highlight="For Your Comfort"
-          subtitle="Step inside Shine Dental — modern treatment rooms, advanced sterilization areas, and a welcoming environment built around you."
+          subtitle="Step inside Shine Dental: modern treatment rooms, advanced sterilization areas, and a welcoming environment built around you."
         />
 
         {/* Grid */}
@@ -78,7 +79,11 @@ export function GallerySection() {
                 setLightbox(i)
               }}
               className={`relative overflow-hidden rounded-2xl cursor-pointer group shadow-sm hover:shadow-xl transition-shadow duration-200 ${
-                img.orientation === "portrait" ? "row-span-2" : "row-span-1"
+                img.orientation === "portrait"
+                  ? "row-span-2"
+                  : img.orientation === "wide"
+                    ? "col-span-2 row-span-2"
+                    : "row-span-1"
               }`}
             >
               <Image
@@ -104,7 +109,7 @@ export function GallerySection() {
                   <Expand className="w-4.5 h-4.5 text-[#B8935A]" />
                 </div>
               </div>
-              <p className="absolute bottom-3 left-3 right-3 text-white font-light text-xs sm:text-sm leading-tight">
+              <p className="absolute bottom-3 left-3 right-3 text-white font-light text-xs sm:text-sm leading-tight whitespace-pre-line">
                 {img.alt}
               </p>
             </motion.div>

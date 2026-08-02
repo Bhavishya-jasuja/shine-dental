@@ -15,7 +15,7 @@ export const CLINIC = {
   whatsappMessage:
     "Hello, I would like to book an appointment at Shine Dental Clinic.",
   hours: {
-    weekdays: { label: "Mon – Sat", time: "11 AM – 3 PM & 5 PM – 7:30 PM" },
+    weekdays: { label: "Mon – Sat", time: "11:00 A.M. – 3:00 P.M. & 5:00 P.M. – 7:30 P.M." },
     sunday: { label: "Sunday", time: "Closed" },
   },
   social: {

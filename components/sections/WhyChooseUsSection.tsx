@@ -14,7 +14,7 @@ const FEATURES = [
   {
     icon: Award,
     title: "IBE Certified Specialists",
-    description: "Diplomates of the Indian Board of Endodontics — highest endodontic qualification.",
+    description: "Diplomates of the Indian Board of Endodontics, the highest endodontic qualification.",
     color: "gold",
   },
   {

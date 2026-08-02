@@ -92,7 +92,7 @@ export const SERVICES: Service[] = [
     title: "Braces & Aligners",
     shortDesc: "Teeth Alignment Solutions",
     description:
-      "Advanced orthodontic solutions — from ceramic braces to invisible clear aligners. Correct misaligned teeth with minimal aesthetic impact on your appearance.",
+      "Advanced orthodontic solutions, from ceramic braces to invisible clear aligners. Correct misaligned teeth with minimal aesthetic impact on your appearance.",
     icon: "git-merge",
     image: "/images/services/braces.webp",
     features: [
@@ -156,7 +156,7 @@ export const SERVICES: Service[] = [
     title: "Oral Surgery",
     shortDesc: "Surgical Extractions & More",
     description:
-      "Safe and precise oral surgical procedures including surgical tooth extractions, cyst removal, and minor oral surgery — performed under local anaesthesia with minimal discomfort.",
+      "Safe and precise oral surgical procedures including surgical tooth extractions, cyst removal, and minor oral surgery, performed under local anaesthesia with minimal discomfort.",
     icon: "shield",
     image: "/images/services/oral-surgery.webp",
     features: [
@@ -172,7 +172,7 @@ export const SERVICES: Service[] = [
     title: "Teeth Whitening",
     shortDesc: "Professional Laser Whitening",
     description:
-      "Professional-grade teeth whitening using advanced laser and bleaching technology. Get teeth up to 8 shades whiter in a single sitting — safely, effectively, and lasting.",
+      "Professional-grade teeth whitening using advanced laser and bleaching technology. Get teeth up to 8 shades whiter in a single sitting, safely, effectively, and lasting.",
     icon: "sparkles",
     image: "/images/services/teeth-whitening.png",
     features: [

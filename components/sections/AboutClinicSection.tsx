@@ -8,10 +8,11 @@ import { CLINIC } from "@/constants/clinic"
 const CLINIC_HIGHLIGHTS = [
   "Multiple fully-equipped treatment rooms",
   "Strict international sterilization protocols",
-  "Advanced air purification system",
+  "Air dental treatment equipment and machines",
   "Comfortable and calming patient lounge",
   "Dedicated reception and consultation areas",
   "Wheelchair accessible facility",
+  "Team of specialist doctors",
 ]
 
 export function AboutClinicSection() {
@@ -22,7 +23,7 @@ export function AboutClinicSection() {
           eyebrow="Our Clinic"
           title="Where Advanced Care"
           highlight="Meets Comfort"
-          subtitle="A modern, welcoming dental facility in the heart of Muzaffarnagar — designed around your comfort and clinical excellence."
+          subtitle="A modern, welcoming dental facility in the heart of Muzaffarnagar, designed around your comfort and clinical excellence."
         />
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -72,7 +73,7 @@ export function AboutClinicSection() {
               </div>
 
               <p className="text-slate-500 leading-relaxed mb-6">
-                Our state-of-the-art dental clinic is located in the heart of Muzaffarnagar, featuring modern architecture and cutting-edge dental technology. The facility is designed to provide a comfortable, stress-free environment — because we believe exceptional dental care starts with exceptional surroundings.
+                Our state-of-the-art dental clinic is located in the heart of Muzaffarnagar, featuring modern architecture and cutting-edge dental technology. The facility is designed to provide a comfortable, stress-free environment, because we believe exceptional dental care starts with exceptional surroundings.
               </p>
 
               <p className="text-slate-500 leading-relaxed mb-8">

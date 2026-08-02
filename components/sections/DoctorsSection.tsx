@@ -10,6 +10,7 @@ const CREDENTIAL_ICONS: Record<string, React.ElementType> = {
   Education: GraduationCap,
   "Post Graduation": GraduationCap,
   "Special Recognition": BadgeCheck,
+  Recognition: BadgeCheck,
   Certification: BadgeCheck,
   "International Training": Globe,
   "Academic Experience": Briefcase,
@@ -32,7 +33,7 @@ export function DoctorsSection() {
           eyebrow="Our Team"
           title="Meet Our"
           highlight="Specialist Doctors"
-          subtitle="IBE-certified specialist endodontists dedicated to painless, precision dental care — trusted by 10,000+ patients across Muzaffarnagar."
+          subtitle="IBE-certified specialist endodontists and Implantologists, precision dental care, trusted by 10,000+ patients across Muzaffarnagar."
         />
 
         <div className="space-y-16 lg:space-y-24">
@@ -101,7 +102,9 @@ export function DoctorsSection() {
                 </h3>
 
                 <p className="text-[#666666] text-sm font-semibold mb-1">{doctor.qualifications}</p>
-                <p className="text-[#666666] leading-relaxed mb-7">{doctor.bio}</p>
+                {doctor.bio && (
+                  <p className="text-[#666666] leading-relaxed mb-7">{doctor.bio}</p>
+                )}
 
                 {/* Credentials */}
                 <div className="divide-y divide-[#E8E8E4] border-t border-[#E8E8E4]">

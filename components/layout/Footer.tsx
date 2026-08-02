@@ -218,10 +218,10 @@ export function Footer() {
             </a>
             <div className="flex gap-3">
               <Clock className="w-4 h-4 text-gold-600 flex-shrink-0 mt-0.5" />
-              <div className="text-sm text-[#666666]">
-                <p>Mon–Sat: 11AM–3PM</p>
-                <p>5PM–7:30PM</p>
-                <p className="text-[#8B4A52] font-semibold mt-1">Sunday: Closed</p>
+              <div className="text-sm">
+                <span className="text-[#2A2A28] font-semibold">{CLINIC.hours.weekdays.label}:</span>{" "}
+                <span className="text-[13px] font-bold text-gold-700">{CLINIC.hours.weekdays.time}</span>
+                <p className="font-bold mt-1" style={{ color: "#A35A5A" }}>Sunday: Closed</p>
               </div>
             </div>
           </div>

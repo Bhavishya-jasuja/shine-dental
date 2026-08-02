@@ -35,7 +35,7 @@ export function ServicesSection() {
           eyebrow="What We Offer"
           title="Our Dental"
           highlight="Services"
-          subtitle="Advanced dental treatments delivered with specialist precision. From microscopic root canals to full smile makeovers."
+          subtitle={"Advanced dental treatments delivered with precision,\nfrom microscopic root canals to full smile makeovers."}
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">

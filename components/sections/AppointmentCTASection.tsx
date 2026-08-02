@@ -39,7 +39,7 @@ export function AppointmentCTASection() {
 
             <div className="flex items-center justify-center lg:justify-start gap-2 mt-4 text-white/60 text-sm">
               <Clock className="w-4 h-4" />
-              Mon–Sat · 11AM–3PM & 5PM–7:30PM
+              {CLINIC.hours.weekdays.label} · {CLINIC.hours.weekdays.time}
             </div>
           </motion.div>
 

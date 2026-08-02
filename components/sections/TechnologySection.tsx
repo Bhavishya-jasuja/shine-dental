@@ -79,9 +79,9 @@ export function TechnologySection() {
                     />
 
                     <span
-                      className="absolute top-3 left-3 text-[10px] font-bold px-2.5 py-1 rounded-full text-white border border-white/30 shadow-sm"
+                      className="absolute top-3 left-3 text-[10px] font-bold px-2.5 py-1 rounded-full text-[#2A2A28] border border-white/50 shadow-sm"
                       style={{
-                        background: "rgba(255,255,255,0.14)",
+                        background: "rgba(255,255,255,0.82)",
                         backdropFilter: "blur(10px) saturate(160%)",
                         WebkitBackdropFilter: "blur(10px) saturate(160%)",
                       }}

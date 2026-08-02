@@ -25,7 +25,7 @@ export function FloatingCTA() {
         style={{ bottom: "calc(5.25rem + env(safe-area-inset-bottom))" }}
       >
         <span
-          className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-0.5 px-3 py-1.5 rounded-2xl border border-white/40 shadow-sm"
+          className="flex flex-col items-center gap-1 px-3.5 py-2 rounded-2xl border border-white/40 shadow-sm"
           style={{
             background: "rgba(255,255,255,0.35)",
             backdropFilter: "blur(16px) saturate(160%)",
@@ -33,11 +33,15 @@ export function FloatingCTA() {
           }}
         >
           <span className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#8DAA91]" />
-            <span className="text-[10px] font-semibold text-[#2A2A28]">Mon–Sat · 11AM–3PM &amp; 5PM–7:30PM</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#8DAA91] shrink-0" />
+            <span className="text-[10px] leading-snug text-center">
+              <span className="font-bold text-[#2A2A28]">{CLINIC.hours.weekdays.label}</span>
+              <span className="text-[9px] font-bold text-gold-700"> · {CLINIC.hours.weekdays.time}</span>
+            </span>
           </span>
-          <span className="w-px h-3 bg-[#E8E8E4]" />
-          <span className="text-[10px] font-semibold text-gold-700">Sunday: Closed</span>
+          <span className="text-[10px] font-bold" style={{ color: "#A35A5A" }}>
+            Sunday: Closed
+          </span>
         </span>
       </motion.div>
 

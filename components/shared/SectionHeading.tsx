@@ -73,7 +73,7 @@ export function SectionHeading({
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.12 }}
           className={cn(
-            "text-base sm:text-lg max-w-2xl leading-relaxed",
+            "text-base sm:text-lg max-w-2xl leading-relaxed whitespace-pre-line",
             light ? "text-white/65" : "text-slate-500",
             align === "center" && "mx-auto"
           )}
