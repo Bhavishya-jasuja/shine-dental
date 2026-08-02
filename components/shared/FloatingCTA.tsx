@@ -36,7 +36,7 @@ export function FloatingCTA() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#8DAA91] shrink-0" />
             <span className="text-[10px] leading-snug text-center">
               <span className="font-bold text-[#2A2A28]">{CLINIC.hours.weekdays.label}</span>
-              <span className="text-[9px] font-bold text-gold-700"> · {CLINIC.hours.weekdays.time}</span>
+              <span className="text-[9px] font-bold text-[#2A2A28]"> · {CLINIC.hours.weekdays.time}</span>
             </span>
           </span>
           <span className="text-[10px] font-bold" style={{ color: "#A35A5A" }}>

@@ -51,7 +51,7 @@ export function Navbar() {
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#8DAA91] shrink-0" />
               <span className="font-bold text-[#2A2A28]">{CLINIC.hours.weekdays.label}</span>
-              <span className="text-[11px] font-bold text-gold-700">· {CLINIC.hours.weekdays.time}</span>
+              <span className="text-[11px] font-bold text-[#2A2A28]">· {CLINIC.hours.weekdays.time}</span>
             </span>
             <span className="w-px h-3 bg-[#E8E8E4]" />
             <span className="font-bold" style={{ color: "#A35A5A" }}>Sunday: Closed</span>

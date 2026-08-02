@@ -220,7 +220,7 @@ export function Footer() {
               <Clock className="w-4 h-4 text-gold-600 flex-shrink-0 mt-0.5" />
               <div className="text-sm">
                 <span className="text-[#2A2A28] font-semibold">{CLINIC.hours.weekdays.label}:</span>{" "}
-                <span className="text-[13px] font-bold text-gold-700">{CLINIC.hours.weekdays.time}</span>
+                <span className="text-[13px] font-bold text-[#2A2A28]">{CLINIC.hours.weekdays.time}</span>
                 <p className="font-bold mt-1" style={{ color: "#A35A5A" }}>Sunday: Closed</p>
               </div>
             </div>
